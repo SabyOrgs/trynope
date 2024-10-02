@@ -36,19 +36,19 @@ export default function SupportUsPage() {
               <h3 className="text-xl font-bold sm:text-2xl">Contact Details</h3>
               <ul className="grid gap-3 text-sm text-muted-foreground sm:grid-cols-2">
                 <li className="flex items-center">
-                  <Icons.mail className="mr-2 h-4 w-4" /> Support Email:
+                  <Icons.moon className="mr-2 h-4 w-4" /> Support Email:
                   nancy@trynope.com
                 </li>
                 <li className="flex items-center">
-                  <Icons.mail className="mr-2 h-4 w-4" /> Developer Email:
+                  <Icons.moon className="mr-2 h-4 w-4" /> Developer Email:
                   sebastin@trynope.com
                 </li>
                 <li className="flex items-center">
-                  <Icons.phone className="mr-2 h-4 w-4" /> Support Phone:
+                  <Icons.sun className="mr-2 h-4 w-4" /> Support Phone:
                   +918695611717
                 </li>
                 <li className="flex items-center">
-                  <Icons.phone className="mr-2 h-4 w-4" /> Developer Phone:
+                  <Icons.sun className="mr-2 h-4 w-4" /> Developer Phone:
                   +917293172932
                 </li>
               </ul>

@@ -392,7 +392,7 @@ export default function PrivacyPage() {
               policy, your data, or your rights with respect to your
               information? Please get in touch by emailing us at{" "}
               <a href="mailto:support@trynope.com" className="text-primary">
-                support@TryNope.com
+                support@trynope.com
               </a>{" "}
               and we’ll be happy to answer them!
             </p>
