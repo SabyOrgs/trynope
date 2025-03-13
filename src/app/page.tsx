@@ -20,7 +20,7 @@ export default function HomePage() {
       </nav>
 
       <header className="mb-16 space-y-4">
-        <h1 className="text-4xl font-bold mb-4 animate-fade-in text-white">
+        <h1 className="text-4xl font-bold mb-4 animate-fade-in">
           <span className="inline-block">
             <ScrambleText text="tryNOPE" />
           </span>
@@ -53,7 +53,7 @@ export default function HomePage() {
           />
           <WorkItem
             title="peckles"
-            position="co-founder(sebastin) and cto(nancy"
+            position="co-founder(sebastin) and cto(nancy)"
             period="nov 2024 - present"
             description="practice with exam simulations tailored to your grade level and curriculum."
             url="https://peckles.com"
