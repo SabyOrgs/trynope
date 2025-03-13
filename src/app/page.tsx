@@ -1,144 +1,162 @@
-import { MainNav } from "@/components/main-nav";
-import { cn } from "@/lib/utils";
+// app/page.tsx
 import Link from "next/link";
+import { MapPin, Building2, ArrowUpRight } from "lucide-react";
 
-import { buttonVariants } from "@/components/ui/button";
-import { SiteFooter } from "@/components/site-footer";
-import { marketingConfig } from "@/config/marketing";
+import { ScrambleText } from "@/components/scramble-text";
+import { Card, CardContent } from "@/components/ui/card";
 
-import Image from "next/image";
-import dey from "@/assets/dey.svg";
-import shotlead from "@/assets/shotlead.svg";
-import tenwhat from "@/assets/tenwhat.svg";
-
-export default function Home() {
+export default function HomePage() {
   return (
-    <div className="flex min-h-screen flex-col">
-      <main className="flex-1">
-        <section className="space-y-6 pb-8 pt-6 md:pb-12 md:pt-10 lg:py-32">
-          <div className="container flex max-w-[64rem] flex-col items-center gap-4 text-center">
-            <Link
-              href="/"
-              className="rounded-2xl bg-muted px-4 py-1.5 text-sm font-medium"
-              target="_blank"
-            >
-              Follow along on Twitter
-            </Link>
-            <h1 className="font-heading text-3xl sm:text-5xl md:text-6xl lg:text-7xl">
-              Nope is your go-to solution for all things tech and beyond.
-            </h1>
-            <p className="max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8">
-              Welcome to Nope, a cutting-edge creative development studio
-              dedicated to turning your digital dreams into reality. Founded by
-              the dynamic husband-and-wife duo, Caroline Nancy and Sebastin
-              Sanjay
-            </p>
-            <div className="space-x-4">
-              <Link
-                href="/login"
-                className={cn(buttonVariants({ size: "lg" }))}
-              >
-                Get Started
-              </Link>
-              <Link
-                href=""
-                target="_blank"
-                className={cn(
-                  buttonVariants({ variant: "outline", size: "lg" }),
-                )}
-              >
-                GitHub
-              </Link>
-            </div>
+    <div className="max-w-4xl mx-auto px-4 py-8">
+      <nav className="flex items-center justify-between mb-12 text-sm">
+        <div className="flex space-x-4">
+          <Link
+            href="/"
+            className="hover:text-accent transition-colors duration-200"
+          >
+            home
+          </Link>
+        </div>
+      </nav>
+
+      <header className="mb-16 space-y-4">
+        <h1 className="text-4xl font-bold mb-4 animate-fade-in text-white">
+          <span className="inline-block">
+            <ScrambleText text="tryNOPE" />
+          </span>
+        </h1>
+        <div className="flex flex-col gap-2 text-gray-400">
+          <div className="flex items-center gap-2">
+            <MapPin className="w-4 h-4" />
+            tiruchirappalli, india
           </div>
-        </section>
-        <section
-          id="features"
-          className="container space-y-6 bg-slate-50 py-8 dark:bg-transparent md:py-12 lg:py-24"
-        >
-          <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
-            <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl">
-              Featured Projects
-            </h2>
-            <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
-              At Nope, we take pride in the innovative solutions we deliver. Our
-              projects span across various industries and technologies,
-              showcasing our versatility and expertise. Here are some of the
-              standout projects we&apos;ve had the pleasure of working on.
-            </p>
-          </div>
-          <div className="mx-auto grid justify-center gap-4 sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-3">
-            <div className="relative overflow-hidden rounded-lg border bg-background p-2">
-              <div className="flex h-[180px] flex-col justify-between rounded-md p-6">
-                <Image src={dey} alt="DEY" width={50} height={50} />
-                <div className="space-y-2">
-                  <h3 className="font-bold">
-                    <Link href="https://dey.app">DEY</Link>
-                  </h3>
-                  <p className="text-sm text-muted-foreground">
-                    Streamline Your Shooting Competitions with DEY
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="relative overflow-hidden rounded-lg border bg-background p-2">
-              <div className="flex h-[180px] flex-col justify-between rounded-md p-6">
-                <Image src={tenwhat} alt="TenWhat" width={50} height={50} />
-                <div className="space-y-2">
-                  <h3 className="font-bold">
-                    <Link href="https://tenwhat.com">TenWhat</Link>
-                  </h3>
-                  <p className="text-sm text-muted-foreground">
-                    Your Personal Shooting Companion, Score Like a Pro.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="relative overflow-hidden rounded-lg border bg-background p-2">
-              <div className="flex h-[180px] flex-col justify-between rounded-md p-6">
-                <Image src={shotlead} alt="ShotLead" width={50} height={50} />
-                <div className="space-y-2">
-                  <h3 className="font-bold">
-                    <Link href="https://shotlead.com">ShotLead</Link>
-                  </h3>
-                  <p className="text-sm">
-                    Monthly Online Shooting Competitions. for the World.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="mx-auto text-center md:max-w-[58rem]">
-            <p className="leading-normal text-muted-foreground sm:text-lg sm:leading-7">
-              Inspired by our work? Contact Nope today to discuss how we can
-              help bring your project to life. Whether it&apos;s a web
-              application, mobile app, or a complex game, our team is ready to
-              tackle any challenge and deliver exceptional results.
-            </p>
-          </div>
-        </section>
-        <section id="open-source" className="container py-8 md:py-12 lg:py-24">
-          <div className="mx-auto flex max-w-[58rem] flex-col items-center justify-center gap-4 text-center">
-            <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl">
-              Get in Touch
-            </h2>
-            <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
-              We&apos;d love to hear from you! Whether you have a question about
-              our services, need a quote for your project, or just want to say
-              hello, our team is here to help.
-              <div className="space-x-4 pt-4">
-                <Link
-                  href="mailto:sebastin@trynope.com"
-                  className={cn(buttonVariants({ size: "lg" }))}
-                >
-                  @ Us
-                </Link>
-              </div>
-            </p>
-          </div>
-        </section>
-      </main>
-      <SiteFooter />
+        </div>
+        <p className="leading-relaxed animate-fade-in-up">
+          we are a married couple who believe that work can be a shared journey
+          that deepens our bond. As we travel with our son, we focus on projects
+          that not only bring us closer as a family but also allow us to create
+          meaningful contributions together.
+        </p>
+      </header>
+
+      <section className="mb-16 animate-fade-in-up">
+        <h2 className="text-2xl font-bold mb-6 flex items-center text-white">
+          <span className="text-accent mr-2">*</span> work
+        </h2>
+        <div className="space-y-8">
+          <WorkItem
+            title="testbreak"
+            position="co-founder(sebastin) and cto(nancy)"
+            period="jan 2025 - present"
+            description="preparation platform designed specifically for Indian government job aspirants"
+            url="https://testbreak.com"
+          />
+          <WorkItem
+            title="peckles"
+            position="co-founder(sebastin) and cto(nancy"
+            period="nov 2024 - present"
+            description="practice with exam simulations tailored to your grade level and curriculum."
+            url="https://peckles.com"
+          />
+        </div>
+      </section>
+
+      <section className="animate-fade-in-up">
+        <h2 className="text-2xl font-bold mb-6 flex items-center text-white">
+          <span className="text-accent mr-2">*</span> links
+        </h2>
+        <div className="flex flex-wrap gap-4 text-sm">
+          <SocialLink title="email" url="mailto:hey@trynope.com" />
+          <SocialLink title="x.com" url="https://x.com/sebastin" />
+        </div>
+      </section>
     </div>
+  );
+}
+
+interface WorkItemProps {
+  title: string;
+  position: string;
+  period?: string;
+  description: string;
+  url: string;
+}
+
+function WorkItem({
+  title,
+  position,
+  period,
+  description,
+  url,
+}: WorkItemProps) {
+  return (
+    <div className="group">
+      <Link href={url} target="_blank">
+        <h3 className="text-xl font-semibold mb-1 text-white group-hover:text-accent transition-colors duration-200">
+          {title}
+        </h3>
+        <p className="text-sm text-gray-400 mb-2">
+          {position} {period && `(${period})`}
+        </p>
+        <p className="text-gray-300">{description}</p>
+      </Link>
+    </div>
+  );
+}
+
+interface ProjectItemProps {
+  title: string;
+  role: string;
+  description: string;
+  url: string;
+}
+
+function ProjectItem({ title, role, description, url }: ProjectItemProps) {
+  return (
+    <div className="group">
+      <Link href={url} target="_blank">
+        <h3 className="text-xl font-semibold mb-1 text-white group-hover:text-accent transition-colors duration-200">
+          {title}
+        </h3>
+        <p className="text-sm text-gray-400 mb-2">{role}</p>
+        <p className="text-gray-300">{description}</p>
+      </Link>
+    </div>
+  );
+}
+
+interface BlogPostItemProps {
+  title: string;
+  date: string;
+  url: string;
+}
+
+function BlogPostItem({ title, date, url }: BlogPostItemProps) {
+  return (
+    <div className="flex justify-between items-center group">
+      <Link
+        href={url}
+        className="text-gray-200 hover:text-accent transition-colors duration-200"
+      >
+        {title}
+      </Link>
+      <span className="text-sm text-gray-400">{date}</span>
+    </div>
+  );
+}
+
+interface SocialLinkProps {
+  title: string;
+  url: string;
+}
+
+function SocialLink({ title, url }: SocialLinkProps) {
+  return (
+    <Link
+      href={url}
+      className="text-gray-400 hover:text-accent transition-colors duration-200"
+    >
+      {title}
+    </Link>
   );
 }
