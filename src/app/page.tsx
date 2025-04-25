@@ -45,18 +45,18 @@ export default function HomePage() {
         </h2>
         <div className="space-y-8">
           <WorkItem
-            title="testbreak"
+            title="cmcrs"
             position="co-founder(sebastin) and cto(nancy)"
             period="jan 2025 - present"
-            description="preparation platform designed specifically for Indian government job aspirants"
-            url="https://testbreak.com"
+            description="competition management and competitor registration system for shooting competitions"
+            url="https://cmcrs.com"
           />
           <WorkItem
-            title="peckles"
+            title="shooterlogs"
             position="co-founder(sebastin) and cto(nancy)"
-            period="nov 2024 - present"
-            description="practice with exam simulations tailored to your grade level and curriculum."
-            url="https://peckles.com"
+            period="feb 2025 - present"
+            description="a comprehensive platform for tracking, analyzing, and improving your shooting skills"
+            url="https://shooterlogs.com"
           />
         </div>
       </section>
